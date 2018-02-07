@@ -26,7 +26,7 @@ namespace OpimBot.Modules {
         }
 
         [Command("!bounce")]
-        public async Task bounceTaskAsync(string message) {
+        public async Task bounceTaskAsync([Remainder]string message) {
 
             await ReplyAsync(message);
 
