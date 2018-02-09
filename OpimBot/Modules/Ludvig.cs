@@ -10,6 +10,8 @@ namespace OpimBot.Modules {
 
         Random randomizer = new Random();
 
+        static int counter = 0;
+
         [Command("ludvig.rng")]
         public async Task Rng() {
 
@@ -35,6 +37,37 @@ namespace OpimBot.Modules {
 
             await ReplyAsync(randInt.ToString());
 
+        }
+
+        [Command("ludvig.increment")]
+        public async Task Incremet() {
+
+            counter++;
+
+            string th = "th";
+
+            if(counter == 1) {
+                th = "st";
+            }
+            if(counter == 2) {
+                th = "nd";
+            }
+            if(counter == 3) {
+                th = "rd";
+            }
+            
+            await ReplyAsync($"{Context.User.Mention} is the {counter.ToString()}{th} user to increment");
+        }
+
+        [Command("ludvig.dump")]
+        public async Task Dump() {
+            string dumper = "";
+            for(int i = 0; i < counter; i++) {
+                dumper += "Aa";
+            }
+
+            counter = 0;
+            await ReplyAsync(dumper);
         }
     }
 }
