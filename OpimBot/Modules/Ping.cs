@@ -9,7 +9,34 @@ using System.Threading.Tasks;
 namespace OpimBot.Modules {
     public class Ping : ModuleBase<SocketCommandContext> {
 
-        
+        Random randomizer = new Random();
+
+        [Command("rng")]
+        public async Task Rng() {
+
+            int randInt = (randomizer.Next() % 100) + 1;
+
+            await ReplyAsync(randInt.ToString());
+
+        }
+
+        [Command("rng")]
+        public async Task Rng(int max) {
+            
+            int randInt = (randomizer.Next() % max) + 1;
+
+            await ReplyAsync(randInt.ToString());
+
+        }
+
+        [Command("rng")]
+        public async Task Rng(int min, int max) {
+
+            int randInt = (randomizer.Next() % (max - min)) + min;
+
+            await ReplyAsync(randInt.ToString());
+
+        }
 
         [Command("ping")]
         public async Task pingAsync() {
