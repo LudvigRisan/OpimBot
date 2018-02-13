@@ -11,21 +11,21 @@ namespace OpimBot.Modules {
 
         
 
-        [Command("!ping")]
+        [Command("ping")]
         public async Task pingAsync() {
 
             await ReplyAsync("Pong!");
 
         }
 
-        [Command("!boop")]
+        [Command("boop")]
         public async Task boopAsync() {
 
             await ReplyAsync("Noooooooooo!");
 
         }
 
-        [Command("!bounce")]
+        [Command("bounce")]
         public async Task bounceTaskAsync([Remainder]string message) {
 
             await ReplyAsync(message);
