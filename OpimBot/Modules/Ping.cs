@@ -11,35 +11,35 @@ namespace OpimBot.Modules {
 
         
 
-        [Command("!ping")]
+        [Command("ping")]
         public async Task pingAsync() {
 
             await ReplyAsync("Pong!");
 
         }
 
-        [Command("!boop")]
+        [Command("boop")]
         public async Task boopAsync() {
 
             await ReplyAsync("Noooooooooo!");
 
         }
 
-        [Command("!bounce")]
+        [Command("bounce")]
         public async Task bounceTaskAsync([Remainder]string message) {
 
             await ReplyAsync(message);
 
         }
 
-        [Command("!Asshole")]
+        [Command("Asshole")]
         public async Task assholeAsync() {
             
             await ReplyAsync($"{Context.User.Mention} is a useless piece of waste!");
 
         }
 
-        [Command("!embed")]
+        [Command("embed")]
         public async Task EmbedifyAsync() {
 
             EmbedBuilder embedder = new EmbedBuilder();

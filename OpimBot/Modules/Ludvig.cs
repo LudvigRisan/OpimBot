@@ -46,13 +46,13 @@ namespace OpimBot.Modules {
 
             string th = "th";
 
-            if(counter == 1) {
+            if(counter % 10 == 1) {
                 th = "st";
             }
-            if(counter == 2) {
+            if(counter % 10 == 2) {
                 th = "nd";
             }
-            if(counter == 3) {
+            if(counter % 10 == 3) {
                 th = "rd";
             }
             
@@ -69,5 +69,7 @@ namespace OpimBot.Modules {
             counter = 0;
             await ReplyAsync(dumper);
         }
+
+
     }
 }
