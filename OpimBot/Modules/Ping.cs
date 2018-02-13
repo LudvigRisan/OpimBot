@@ -32,14 +32,14 @@ namespace OpimBot.Modules {
 
         }
 
-        [Command("Asshole")]
+        [Command("!Asshole")]
         public async Task assholeAsync() {
             
             await ReplyAsync($"{Context.User.Mention} is a useless piece of waste!");
 
         }
 
-        [Command("embed")]
+        [Command("!embed")]
         public async Task EmbedifyAsync() {
 
             EmbedBuilder embedder = new EmbedBuilder();
