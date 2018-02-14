@@ -26,7 +26,7 @@ namespace OpimBot {
 
             _services = new ServiceCollection().AddSingleton(_client).AddSingleton(_commands).BuildServiceProvider();
 
-            string botToken = "NDA4OTM4NzEwODU2NjMwMjg0.DVshoQ.eWxqLarTXgv9r0mwDX6v43chkks";
+            string botToken = System.IO.File.ReadAllText(@"C:\Users\eier\Desktop\OpimBot\Token.txt");
 
             //logging
 
